@@ -1,4 +1,4 @@
-package com.ironbucket.brazznossel.config;
+package com.ironbucket.brazznossel;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
