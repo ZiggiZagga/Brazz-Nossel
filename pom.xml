@@ -9,7 +9,7 @@
 		<!--  lookup parent from repository  -->
 	</parent>
 	<groupId>com.ironbucket</groupId>
-	<artifactId>sentinelgear</artifactId>
+	<artifactId>brazznossel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>brazz-nossel</name>
 	<description>channels object storage traffic with identity awareness, policy-governed enforcement, and full audit traceability—one stream at a time</description>
@@ -32,20 +32,34 @@
 	</properties>
 	
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
 		</dependency>
+		
 		<dependency>
 		  <groupId>org.springframework.security</groupId>
 		  <artifactId>spring-security-oauth2-resource-server</artifactId>
 		</dependency>
+    	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>    	
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
+		
+		<dependency>	
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-docker-compose</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -63,8 +77,6 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-
 		
 	</dependencies>
 		
