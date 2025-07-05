@@ -1,15 +1,39 @@
 server:
   port: 0
 
+logging:
+  level:
+    org:
+      jclouds: DEBUG
+#http.wire=DEBUG
+#logging.level.org.jclouds.headers=DEBUG
+#logging.level.org.jclouds.payload=DEBUG
 eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
     region: ${EUREKA_REGION:dev-region-1}
 
+
+ironbucket:
+  tenants:
+    tenant-a:
+      backend: minio
+      provider: s3
+      identity: access-key-a
+      credential: secret-key-b
+      endpoint: http://localhost:9000
+    tenant-b:
+      backend: minio			
+      provider: s3
+      identity: access-key-b
+      credential: secret-key-b
+      endpoint: http://localhost:9000
+
 spring:
   application:
     name: brazz-nossel
+
 
   cloud:
     gateway:
